@@ -12,7 +12,7 @@ def home():
     """Rota principal da aplicação"""
     return render_template("home.html")
 
-
+# Teste teste
 @app.route("/novo")
 def novo():
     """Nova rota"""
