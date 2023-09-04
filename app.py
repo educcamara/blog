@@ -19,7 +19,3 @@ def novo():
     return "<h1>Eu sou o novo Carlos Eduardo<h1>"
 
 
-@app.route("/redireciona")
-def redireciona():
-    """Redireciona para a rota novo"""
-    return redirect(url_for("novo"))
