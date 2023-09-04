@@ -1,6 +1,6 @@
 from flask import Flask
 
-app = Flask("Meu Cadu")
+app = Flask(__name__)
 # Comenario
 @app.route('/')
 def hello():
