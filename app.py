@@ -17,4 +17,4 @@ def home():
 @app.route("/novo")
 def novo():
     """Nova rota"""
-    return "<h1>Eu sou o novo Carlos Eduardo<h1>"
+    return render_template("novo.html")
