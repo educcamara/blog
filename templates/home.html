@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eu sou o Carlos Eduardo</title>
+    <title>Meu Site</title>
 </head>
 <body>
-    <h1>Salve meu bao, aperta ae</h1>
-    <a href="/novo">
-        <button>Segredo</button>
-    </a>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="conteudo">
+        {% block conteudo %}{% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2023 Meu Site</p>
+    </footer>
 </body>
 </html>

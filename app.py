@@ -5,6 +5,12 @@ from flask import Flask, render_template
 
 app = Flask("Meu Cadu")
 
+# Banco de dados Mock
+posts = [
+    {"título": "Andre: a thread", "texto": "teste teste"},
+    {"título": "Minha segunda postagem", "texto": "segundo teste"},
+]
+
 
 # Comenario
 @app.route("/")
@@ -13,8 +19,8 @@ def home():
     return render_template("home.html")
 
 
-# Teste teste
-@app.route("/novo")
-def novo():
-    """Nova rota"""
-    return render_template("novo.html")
+@app.route("/sobre")
+def sobre():
+    """Rota sobre"""
+    return render_template("sobre.html")
+

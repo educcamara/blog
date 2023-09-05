@@ -15,6 +15,9 @@ main {
     margin-bottom: 50px; /* Altura do footer */
 }
 
+h1 {color: #303238; font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;}
+h2 {color: #383838; font-family: Arial, Helvetica, sans-serif;}
+
 /* Estilos CSS para o footer fixo */
 .footer-fixed {
     position: fixed;
