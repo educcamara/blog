@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+
+{% block conteudo %}
+    <h1>Minhas postagens</h1>
+    {% for post in posts %}
+        <h2>{{ post.titulo }}</h2>
+        <p>{{ post.texto }}</p>
+        <p>Publicado em: {{ post.data }}</p>
+    {% else %}
+        <p>Nenhuma postagem encontrada.</p>
+    {% endfor %}
+{% endblock %}

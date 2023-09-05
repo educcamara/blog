@@ -1,31 +1,13 @@
-/* Estilos CSS para o header fixo */
-.header-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* Cor de fundo do header */
-    color: #ffffff; /* Cor do texto no header */
-    padding: 10px;
-    text-align: center;
-}
-
 main {
     margin-top: 100px; /* Altura do header */
     margin-bottom: 50px; /* Altura do footer */
 }
 
-h1 {color: #303238; font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;}
-h2 {color: #383838; font-family: Arial, Helvetica, sans-serif;}
+h1 {color: #2c4464; font-family: "Arial Black", sans-serif;}
+h2 {color: #35425d; font-family: "Arial Black", sans-serif;}
 
-/* Estilos CSS para o footer fixo */
-.footer-fixed {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* Cor de fundo do footer */
-    color: #fff; /* Cor do texto no footer */
-    padding: 10px;
-    text-align: center;
+.conteudo {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #c2c2c2;
 }
