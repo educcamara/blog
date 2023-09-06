@@ -1,6 +1,7 @@
 {% extends "home.html" %}
 
 {% block conteudo %}
+<div class="conteudo">
     <h1>Minhas postagens</h1>
     {% for post in posts %}
         <h2>{{ post.titulo }}</h2>
@@ -9,4 +10,5 @@
     {% else %}
         <p>Nenhuma postagem encontrada.</p>
     {% endfor %}
+</div>
 {% endblock %}
