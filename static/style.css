@@ -7,7 +7,12 @@ h1 {color: #2c4464; font-family: "Arial Black", sans-serif;}
 h2 {color: #35425d; font-family: "Arial Black", sans-serif;}
 
 .conteudo {
-    padding: 20px;
+    width: 20em;
+    position: relative;
+    left: 30;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     background-color: #f3f3f3;
     border: 1px solid #c2c2c2;
 }
