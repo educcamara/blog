@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog do Cadu</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>Blog do Cadu</h1>
+        <nav>
+        <ul>
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/posts">Minhas postagens</a></li>
+        </ul>
+        </nav>
+</header>
+<main>
+       {% block conteudo %}{% endblock %}
+</main>
+<footer>
+        <p>&copy; 2023 Blog do Cadu</p>
+</footer>
+</body>
+</html>

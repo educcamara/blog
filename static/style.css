@@ -3,8 +3,12 @@ main {
     margin-bottom: 50px; /* Altura do footer */
 }
 
-h1 {color: #2c4464; font-family: "Arial Black", sans-serif;}
-h2 {color: #35425d; font-family: "Arial Black", sans-serif;}
+body {background-color: #313232;}
+h1 {color: #e1e3e7; font-family: "Arial Black", sans-serif;}
+h2 {color: #c7cfdb; font-family: "Arial Black", sans-serif;}
+h3 {color: #cfd2d7; font-family: "Arial Black", sans-serif;}
+p {color: #bebebe; font-family: "Arial", sans-serif;}
+a {color: #87b5d8; font-family: "Arial", sans-serif;}
 
 .conteudo {
     width: 20em;
