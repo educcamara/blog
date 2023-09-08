@@ -26,7 +26,7 @@ posts_list = [
 @app.route("/")
 def home():
     """Rota principal da aplicação"""
-    return render_template("home.html")
+    return render_template("main.html")
 
 
 @app.route("/sobre")

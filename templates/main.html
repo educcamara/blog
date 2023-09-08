@@ -3,23 +3,32 @@
 <head>
     <title>Blog do Cadu</title>
     <link rel="stylesheet" href="/static/style.css">
+    <meta charset="utf-8">
 </head>
+
+
+
 <body>
+
 <header>
-    <h1>Blog do Cadu</h1>
-        <nav>
+    <div class='container'>
+    <h1 class='logo'>Blog do Cadu</h1>
+
+    <nav>
         <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/posts">Minhas postagens</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contato</a></li>
         </ul>
-        </nav>
+    </nav>
+    </div>
+
 </header>
-<main>
-       {% block conteudo %}{% endblock %}
-</main>
-<footer>
-        <p>&copy; 2023 Blog do Cadu</p>
-</footer>
+
+
+
 </body>
+
+
+
 </html>

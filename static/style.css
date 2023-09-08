@@ -3,12 +3,73 @@ main {
     margin-bottom: 50px; /* Altura do footer */
 }
 
-body {background-color: #313232;}
+body {
+    background-color: #313232;
+    margin: 0;
+    padding: 0;
+}
 h1 {color: #e1e3e7; font-family: "Arial Black", sans-serif;}
 h2 {color: #c7cfdb; font-family: "Arial Black", sans-serif;}
 h3 {color: #cfd2d7; font-family: "Arial Black", sans-serif;}
 p {color: #bebebe; font-family: "Arial", sans-serif;}
 a {color: #87b5d8; font-family: "Arial", sans-serif;}
+
+header { 
+    background-color: #2f6faf;
+}
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* ########## NAV ############ */
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 15px;
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    padding: 60% 5%;
+}
+nav a:hover {
+    color: #1d1d1d;
+    font-weight: 400;
+}
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #1d1d1d;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 100ms;
+}
+nav a:hover::before {
+    width: 100%;
+}
+
 
 .conteudo {
     width: 20em;
@@ -17,6 +78,24 @@ a {color: #87b5d8; font-family: "Arial", sans-serif;}
     padding-top: 1%;
     padding-left: 2%;
     padding-right: 2%;
-    background-color: #f3f3f3;
-    border: 1px solid #c2c2c2;
+    background-color: #232425;
+    border: 1px solid #ffffff52;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.logo {
+    color: #232425;
+    /* margin: 0;    
+    font-weight: 1000;
+    font-size: 2.3em; */
+    /* padding: 10px; */
+    float: left;
 }
