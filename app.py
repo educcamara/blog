@@ -29,13 +29,7 @@ def home():
     return render_template("main.html")
 
 
-@app.route("/sobre")
-def sobre():
-    """Rota sobre"""
-    return render_template("sobre.html")
-
-
-@app.route("/posts")
+@app.route("/blog")
 def posts():
     """Rota posts"""
-    return render_template("posts.html", posts=posts_list)
+    return render_template("blog.html", posts=posts_list)
