@@ -59,7 +59,7 @@ nav a {
     text-transform: uppercase;
 
     opacity: 0;
-    transition: opacity 80ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 nav a:hover {
     color: #000;
@@ -127,17 +127,35 @@ nav a:hover {
 
     nav {        
         all: unset;
+        position: absolute;
         grid-column: 3 / 4;
+        right: 0;
+        top: 25px;
 
-        display: flex;
+        /* display: flex;
         justify-content: flex-end;
-        align-items: center;
-        position: static;
-        transform: none;
-        width: auto;
+        align-items: center; */
     }
     nav a {
+        position: relative;
         opacity: 1;
+    }
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #000;
+        position: absolute;
+        top: -0.75em;
+        left: 0;
+        right: 0;
+
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 150ms;
+    }
+    nav a:hover::before {
+        transform: scale(1, 1);
     }
     nav ul {
         display: flex;
