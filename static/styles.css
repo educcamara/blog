@@ -138,6 +138,7 @@ nav a:hover {
     }
     nav a {
         position: relative;
+        padding: 25px 2px;
         opacity: 1;
     }
     nav a::before {
@@ -146,7 +147,7 @@ nav a:hover {
         height: 5px;
         background: #000;
         position: absolute;
-        top: -0.75em;
+        top: 0;
         left: 0;
         right: 0;
 
