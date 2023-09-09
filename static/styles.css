@@ -17,6 +17,7 @@ body {
 header {
     background: var(--background);
     text-align: center;
+    top: 0;
     position: fixed;
 
     z-index: 100;
@@ -166,4 +167,21 @@ nav a:hover {
         margin-left: 3em;
         margin-bottom: 0;
     }
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 4em;
+
+    line-height: 1.5;
+}
+.content p {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.content h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+.content h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
 }
