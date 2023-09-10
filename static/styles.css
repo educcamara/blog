@@ -1,5 +1,9 @@
 :root {
-    --background: #479ff1d5;
+    --background: rgb(49, 50, 53);
+    --background_accent_primary: rgba(75, 75, 80, 1);
+    --header_background: rgba(71, 159, 241, 0.85);
+    --header_background_hover: rgba(71, 159, 241, 1);
+    --header_background_active: rgba(49, 132, 210, 1);
 }
 
 *, *::before, *::after {
@@ -8,14 +12,14 @@
 
 body {
     margin: 0;
-    background: #313235;
+    background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
 /* NAV STYLES */
 header {
-    background: var(--background);
+    background: var(--header_background);
     text-align: center;
     top: 0;
     position: fixed;
@@ -38,7 +42,7 @@ nav {
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--background);
+    background: var(--header_background);
     width: 100%;
     
     transform: scale(1, 0);
@@ -217,4 +221,71 @@ nav a:hover {
     
     background: #4b4b50;
     border-radius: 2px;
+}
+
+
+
+.login {
+    width: 30%;
+    aspect-ratio: 4/3;
+    margin: 0 auto;
+    padding: 1.5em;
+    padding-top: 0.5em;
+    background: var(--background_accent_primary);
+    border-radius: 5px;
+}
+.login dt {
+    font-size: 2em;
+    font-weight: 900;
+    color: #fff;
+}
+.login dd {
+    margin: 0.5em 0;
+}
+.login input {
+    font-size: medium;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--background);
+
+    width: 100%;
+    margin: 0.7em 0;
+    padding: 0.5em;
+    
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.login input[type="submit"] {
+    font-size: large;
+    font-weight: 900;
+    background: var(--header_background);
+    color: #ffffff;
+    
+    aspect-ratio: 6/1;
+    margin: 0em 0;
+    
+    cursor: pointer;
+}
+.login input[type="submit"]:hover {
+    background: var(--header_background_hover);
+}
+.login input[type="submit"]:active {
+    color: #dadada;
+    background: var(--header_background_active);
+    transform: scale(0.95);
+}
+
+
+
+.href_login a {
+    font-size: medium;
+    font-weight: 600;
+    color: var(--header_background);
+    text-decoration: underline;
+    text-transform: lowercase;
+
+    position: absolute;
+    right: 4%;
+    top: 12.2em;
 }

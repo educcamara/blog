@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, \
 from posts import blog_posts
 
 app = Flask(__name__)
-app.config['SECRET KEY'] = 'cadu'
+app.secret_key = 'cadu'
 
 
 @app.route('/')
@@ -34,6 +34,28 @@ def blog_post(post_id):
         return render_template('post.html', post=post)
     except IndexError:
         abort(404)
+
+
+@app.route('/new_post')
+def new_post():
+    """ New post page """
+    if not session['logged_in']:
+        abort(401)
+    return render_template('new_post.html')
+
+
+@app.route('/create_post', methods=['POST'])
+def create_post():
+    """ Create post page """
+    if not session['logged_in']:
+        abort(401)
+    title = request.form['title']
+    body = request.form['body']
+    blog_posts.append({'title': title, 'body': body})
+    flash('Post criado com sucesso!')
+    return redirect(url_for('blog'))
+
+
 #
 # Login & Logout
 #

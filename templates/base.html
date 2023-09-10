@@ -30,7 +30,20 @@
     <div class="title">
     {% block title %}{% endblock %}
     </div>
+    
+    <div class="href_login">
+    {% if session.logged_in %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+    {% endif %}
+    </div>
+
     <div class="content">
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+
     {% block content %}{% endblock %}
     </div>
 </main>
