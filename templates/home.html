@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Blog do Cadu</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
+{% extends "base.html" %}
 
-<header>
-    <div class='container'>
-
-    <h1 class='logo'>Cadu</h1>
-    <input type="checkbox" class="nav-toggle" id="nav-toggle">
-    <nav>
-    <ul>
-        <li><a href="/">Início</a></li>
-        <li><a href="/about">Sobre</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contato</a></li>
-    </ul>
-    </nav>
-    <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-    </label>
-
-    </div>
-</header>
-
-<main>
-    {% block content %}{% endblock %}
-</main>
-
-</body>
-</html>
+{% block content %}
+<h1>Início</h1>
+{% endblock %}
