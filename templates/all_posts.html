@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}<h1>Blog</h1>{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for post in posts | reverse %}
+            <li>
+                <a href="{{ url_for('blog_post', post_id=loop.revindex) }}"><h2>{{ post.title }}</h2></a>
+                <p>{{ post.body }}</p>
+            </li>
+        {% else %}
+            <p>Nenhum post encontrado</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

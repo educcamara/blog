@@ -24,6 +24,10 @@ header {
     width: 100%;
 }
 
+
+
+
+
 .logo {
     margin-top: 0.4em;
     display: inline-block;
@@ -36,7 +40,7 @@ nav {
     left: 0;
     background: var(--background);
     width: 100%;
-
+    
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 150ms ease-in-out;
@@ -58,7 +62,7 @@ nav a {
     text-decoration: none;
     font-size: 1.2em;
     text-transform: uppercase;
-
+    
     opacity: 0;
     transition: all 150ms ease-in-out;
 }
@@ -83,7 +87,7 @@ nav a:hover {
     left: 0;
     margin-left: 1em;    
     height: 100%;
-
+    
     display: flex;
     align-items: center;
 }
@@ -114,7 +118,7 @@ nav a:hover {
     .nav-toggle-label {
         display: none;
     }
-
+    
     header {
         display: grid;
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
@@ -123,16 +127,16 @@ nav a:hover {
     
     .logo {
         grid-column: 2 / 3;
-
+        
     }
-
+    
     nav {        
         all: unset;
         position: absolute;
         grid-column: 3 / 4;
         right: 0;
         top: 25px;
-
+        
         /* display: flex;
         justify-content: flex-end;
         align-items: center; */
@@ -151,7 +155,7 @@ nav a:hover {
         top: 0;
         left: 0;
         right: 0;
-
+        
         transform: scale(0, 1);
         transform-origin: left;
         transition: transform ease-in-out 150ms;
@@ -172,11 +176,15 @@ nav a:hover {
 .content {
     width: 80%;
     margin: 0 auto;
-    padding: 4em;
-
+    padding: 0;
+    top: -1em;
+    
     line-height: 1.5;
 }
-.content p {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.content p {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .content h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 900;
@@ -184,4 +192,29 @@ nav a:hover {
 .content h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 800;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 900;
+    width: 95%;
+    padding: 2em;
+    color: #fff;
+    position: relative;
+    overflow: visible;
+
+    /* border-bottom: #4b4b50 4px solid;
+    margin: 0 auto; */
+}
+.title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 98%;
+    left: 4%; 
+    margin: 0 auto;
+    
+    background: #4b4b50;
+    border-radius: 2px;
 }

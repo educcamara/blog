@@ -22,8 +22,8 @@ def about():
 @app.route('/blog')
 def blog():
     """ Blog page """
-    posts = blog_posts[::-1]
-    return render_template('blog.html', posts=posts)
+    posts = blog_posts
+    return render_template('all_posts.html', posts=posts)
 
 
 @app.route('/blog/<int:post_id>')

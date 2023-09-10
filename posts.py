@@ -2,14 +2,14 @@
 blog_posts = [
     {
         'title': 'Postagem 1',
-        'text': ''
+        'body': ''
     },
     {
         'title': 'Postagem 2',
-        'text': ''
+        'body': ''
     },
     {
         'title': 'Postagem 3',
-        'text': ''
+        'body': ''
     }
 ]
