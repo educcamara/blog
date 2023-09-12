@@ -59,6 +59,21 @@ def blog():
     return render_template('all_posts.html', posts=posts)
 
 
+@app.route('/blog/<int:post_id>')
+def blog_post(post_id):
+    """ Blog post page """
+    sql_str = "SELECT title, body, created_at FROM posts WHERE id = ?"
+    cur = g.db.execute(sql_str, [post_id])
+
+    title, body, created_at = cur.fetchone()
+    post = {
+        'title': title, 
+        'body': body, 
+        'created_at': created_at
+        }
+    return render_template('single_post.html', post=post)
+
+
 # @app.route('/blog/<int:post_id>')
 # def blog_post(post_id):
 #     """ Blog post page """
