@@ -1,11 +1,35 @@
 """ My Blog Site """
+import sqlite3
 from flask import Flask, render_template, request, redirect, \
-    flash, url_for, session, abort
-from posts import blog_posts
+    flash, url_for, session, abort, g
 
 app = Flask(__name__)
 app.secret_key = 'cadu'
+app.config["DATABASE"] = "posts.db"
 
+def connect():
+    """ Connect to database """
+    return sqlite3.connect(app.config["DATABASE"])
+
+
+@app.before_request
+def before_request():
+    """ Connect to database before request """
+    g.db = connect()
+
+
+@app.teardown_request
+def teardown_request(exception):
+    """ Close database connection after request """
+    if exception:
+        pass
+    if hasattr(g, 'db'):
+        g.db.close()
+
+
+#
+#
+#
 
 @app.route('/')
 def home():
@@ -22,18 +46,27 @@ def about():
 @app.route('/blog')
 def blog():
     """ Blog page """
-    posts = blog_posts
+    sql_str = "SELECT title, body, created_at FROM posts ORDER BY id DESC"
+    cur = g.db.execute(sql_str)
+
+    posts = []
+    for title, body, created_at in cur.fetchall():
+        posts.append({
+            'title': title, 
+            'body': body, 
+            'created_at': created_at
+            })
     return render_template('all_posts.html', posts=posts)
 
 
-@app.route('/blog/<int:post_id>')
-def blog_post(post_id):
-    """ Blog post page """
-    try:
-        post = blog_posts[post_id - 1]
-        return render_template('post.html', post=post)
-    except IndexError:
-        abort(404)
+# @app.route('/blog/<int:post_id>')
+# def blog_post(post_id):
+#     """ Blog post page """
+#     try:
+#         post = blog_posts[post_id - 1]
+#         return render_template('post.html', post=post)
+#     except IndexError:
+#         abort(404)
 
 
 @app.route('/new_post')
@@ -46,12 +79,16 @@ def new_post():
 
 @app.route('/create_post', methods=['POST'])
 def create_post():
-    """ Create post page """
+    """ Create post """
     if not session['logged_in']:
         abort(401)
     title = request.form['title']
     body = request.form['body']
-    blog_posts.append({'title': title, 'body': body})
+
+    sql_str = "INSERT INTO posts (title, body) VALUES (?, ?)"
+    g.db.execute(sql_str, [title, body])
+    g.db.commit()
+
     flash('Post criado com sucesso!')
     return redirect(url_for('blog'))
 
