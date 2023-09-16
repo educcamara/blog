@@ -74,16 +74,6 @@ def blog_post(post_id):
     return render_template('single_post.html', post=post)
 
 
-# @app.route('/blog/<int:post_id>')
-# def blog_post(post_id):
-#     """ Blog post page """
-#     try:
-#         post = blog_posts[post_id - 1]
-#         return render_template('post.html', post=post)
-#     except IndexError:
-#         abort(404)
-
-
 @app.route('/new_post')
 def new_post():
     """ New post page """
