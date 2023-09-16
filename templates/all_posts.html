@@ -4,7 +4,7 @@
 
 {% block content %}
     {% if session.logged_in %}
-        <button><a href="{{ url_for('new_post') }}">Novo Post</a></button>
+        <button class="post_button"><a href="{{ url_for('new_post') }}">Novo Post</a></button>
     {% endif %}
     <div class="posts">
     <ul>
