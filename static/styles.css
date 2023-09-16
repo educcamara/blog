@@ -1,6 +1,8 @@
 :root {
     --background: rgb(49, 50, 53);
     --background_accent_primary: rgba(75, 75, 80, 1);
+    --background_accent_secondary: rgba(75, 75, 80, 0.5);
+    --background_accent_tertiary: rgb(61, 61, 65);
     --header_background: rgba(71, 159, 241, 0.85);
     --header_background_hover: rgba(71, 159, 241, 1);
     --header_background_active: rgba(49, 132, 210, 1);
@@ -368,4 +370,80 @@ nav a:hover {
     color: #dadada;
     background: var(--header_background_active);
     transform: scale(0.95);
+}
+
+
+
+.posts ul {
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+}
+.posts ul li {
+    background: var(--background_accent_tertiary);
+    /* font-size: 0.5em; */
+
+    color: #d9e1e4;
+    padding-top: 2px;
+    padding: 0.8em 2em;
+    margin-bottom: 2.5em;
+    
+    border-radius: 5px;
+    border: none;
+    outline: solid 2px var(--background_accent_primary);
+}
+.posts ul li a {
+    color: var(--header_background);
+    text-decoration: none;
+    padding: 0;
+
+    font-size: 24px;
+
+    max-width: fit-content;
+    top: -5px;
+
+}
+.posts ul li a:hover {
+    text-decoration: underline;
+}
+.posts ul li a:active {
+    color: var(--header_background_active);
+    transform: scale(0.95);
+}
+
+.posts ul li a::after {
+    background: var(--background_accent_primary);
+    border-radius: 1px;
+
+    content: "";
+    display: block;
+
+    position: relative;
+    top: -0.5em;
+    height: 2.5px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post_content {
+    font-size: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.post_content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--background_accent_tertiary));
+    pointer-events: none; /* Isso permite que o conteúdo por baixo seja clicável */
+}
+
+.post_date {
+    font-size: 10px;
+    font-weight: 100;
+    color: #8d9294;
 }
