@@ -289,3 +289,83 @@ nav a:hover {
     right: 4%;
     top: 12.2em;
 }
+
+
+
+.new_post {
+    background: var(--background_accent_primary);
+
+    width: 60%;
+    padding: 2em;
+    margin: 0 auto;
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.new_post label {
+    font-size: 1.5em;
+    font-weight: 900;
+
+    clear: both;
+
+    color: #fff;
+}
+
+.new_post input[type="text"]{
+    font-size: medium;
+    font-weight: 600;
+    color: #d9e1e4;
+    background: var(--background);
+
+    width: 100%;
+    margin: 0.7em 0;
+    padding: 0.5em;
+    
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.new_post textarea {
+    font-size: medium;
+    font-weight: 600;
+    color: #d9e1e4;
+    background: var(--background);
+
+    width: 100%;
+    min-width: 70%;
+    max-width: 100%;
+    min-height: 2em;
+    margin: 0.7em 0;
+    padding: 0.5em;
+    
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.new_post input[type="submit"] {
+    font-size: large;
+    font-weight: 900;
+    color: #ffffff;
+    background: var(--header_background);
+    /* disable input style: */
+    border: none;
+    border-radius: 5px;
+
+    padding: 0.2em 1em;
+    margin: 0.7em 0;
+    margin-bottom: -1em;
+
+    cursor: pointer;
+}
+.new_post input[type="submit"]:hover {
+    background: var(--header_background_hover);
+}
+.new_post input[type="submit"]:active {
+    color: #dadada;
+    background: var(--header_background_active);
+    transform: scale(0.95);
+}

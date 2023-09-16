@@ -7,10 +7,12 @@
         <button><a href="{{ url_for('new_post') }}">Novo Post</a></button>
     {% endif %}
     <ul>
-        {% for post in posts | reverse %}
+        {% for post in posts %}
             <li>
                 <a href="{{ url_for('blog_post', post_id=loop.revindex) }}"><h2>{{ post.title }}</h2></a>
-                <p>{{ post.body }}</p>
+                {% for paragraph in post.body.splitlines() %}
+                    <p>{{ paragraph }}</p>
+                {% endfor %}
                 <p>Postado em: {{ post.created_at }}</p>
             </li>
         {% else %}
